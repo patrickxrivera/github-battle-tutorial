@@ -3,19 +3,53 @@ body {
 }
 
 .App__container {
-  width: 1000px;
-  border: 2px solid red;
+  width: 1200px;
   margin: 2rem auto 0;
 }
 
-.Popular__unordered-list {
+.SelectLanguage__container {
   display: flex;
   list-style-type: none;
   justify-content: center;
+  padding-left: 0;
+  margin-bottom: 3rem;
 }
 
-.Popular__list-item {
+.LanguageItem__item {
   margin: 0 1.5rem;
   cursor: pointer;
   font-weight: bold;
+}
+
+.RepoList__container {
+  display: grid;
+  list-style-type: none;
+  grid-template-columns: repeat(6, 1fr);
+  padding-left: 0;
+}
+
+.RepoItem__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.RepoItem__container > * {
+  margin: 0.2rem 0;
+}
+
+.RepoItem__ranking {
+  font-size: 1.25rem;
+}
+
+.RepoItem__avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+
+.RepoItem__container a:visited {
+  text-decoration: none;
+  color: blue;
 }
