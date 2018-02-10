@@ -1,24 +1,32 @@
 import React from 'react';
 
+function LanguageItem(props) {
+  return <li
+            style={props.lang === props.selectedLanguage ? { color: '#d0021b' } : null }
+            onClick={props.onSelect.bind(null, props.lang)}
+            className="Popular__list-item"
+         >
+          {props.lang}
+        </li>;
+}
+
 function SelectedLanguage(props) {
   const languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
 
   return (
     <ul className="Popular__unordered-list">
-      {languages.map(lang => renderList(props, lang))}
+      {languages.map(lang => {
+        return (
+          <LanguageItem
+            selectedLanguage={props.selectedLanguage}
+            onSelect={props.onSelect}
+            lang={lang}
+            key={lang}
+          />
+        )
+      })}
     </ul>
   )
-}
-
-function renderList(props, lang) {
-  return <li
-            style={lang === props.selectedLanguage ? { color: '#d0021b' } : null }
-            onClick={props.onSelect.bind(null, lang)}
-            className="Popular__list-item"
-            key={lang}
-          >
-            {lang}
-        </li>;
 }
 
 class Popular extends React.Component {
