@@ -8,7 +8,7 @@ body {
   margin: 2rem auto 0;
 }
 
-.Popular__container {
+.Popular__unordered-list {
   display: flex;
   list-style-type: none;
   justify-content: center;
