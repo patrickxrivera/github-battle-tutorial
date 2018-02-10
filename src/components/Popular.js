@@ -18,8 +18,7 @@ function LanguageItem(props) {
 LanguageItem.propTypes = {
   selectedLanguage: PropTypes.string.isRequired,
   onSelect: PropTypes.func.isRequired,
-  lang: PropTypes.string.isRequired,
-  key: PropTypes.string.isRequired
+  lang: PropTypes.string.isRequired
 }
 
 function SelectLanguage(props) {
@@ -39,16 +38,30 @@ function SelectLanguage(props) {
   )
 }
 
+SelectLanguage.propTypes = {
+  selectedLanguage: PropTypes.string.isRequired,
+  onSelect: PropTypes.func.isRequired
+}
+
 function RepoItem(props) {
   return (
-    <div className="RepoItem__container">
+    <div className="RepoItem__container" key={props.repo.name}>
       <li className="RepoItem__ranking">#{props.idx + 1}</li>
-      <img src={props.repo.owner.avatar_url} className="RepoItem__avatar"></img>
-      <li><a href={props.repo.html_url}>{props.repo.name}</a></li>
-      <li>{props.repo.owner.login}</li>
+      <img
+        src={props.repo.owner.avatar_url}
+        className="RepoItem__avatar"
+        alt={`Repo for ${props.repo.owner.login}`}>
+      </img>
+      <li><a href={props.repo.html_url} target="_blank">{props.repo.name}</a></li>
+      <li>@{props.repo.owner.login}</li>
       <li>{props.repo.stargazers_count} stars</li>
     </div>
   )
+}
+
+RepoItem.propTypes = {
+  repo: PropTypes.object.isRequired,
+  idx: PropTypes.number.isRequired
 }
 
 function RepoGrid(props) {
@@ -59,6 +72,10 @@ function RepoGrid(props) {
       })}
     </ul>
   )
+}
+
+RepoGrid.propTypes = {
+  repos: PropTypes.array.isRequired
 }
 
 class Popular extends React.Component {
