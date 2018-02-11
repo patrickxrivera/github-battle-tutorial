@@ -100,7 +100,7 @@ body {
   font-size: 1.25rem;
 }
 
-.RepoItem__avatar {
+.avatar {
   width: 130px;
   height: 130px;
   border-radius: 50%;
@@ -114,17 +114,17 @@ body {
 .Battle__row {
   margin-top: 5rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-.PlayerInput__column {
+.column {
   display: flex;
   flex-direction: column;
   width: 500px;
   align-items: center;
 }
 
-.PlayerInput__column input {
+.column input {
   border-radius: 3px;
   margin: 1.8rem 0 0;
   padding: 5px;
@@ -133,7 +133,7 @@ body {
   width: 80%;
 }
 
-.PlayerInput__column label {
+.column label {
   text-align: center;
   font-size: 30px;
   font-weight: 200;
@@ -143,4 +143,17 @@ body {
   text-align: center;
   font-size: 30px;
   font-weight: 200;
+}
+
+.PlayerPreview__reset {
+  border: none;
+  background: transparent;
+  color: #d0021b;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.PlayerPreview__reset:hover {
+  cursor: pointer;
 }

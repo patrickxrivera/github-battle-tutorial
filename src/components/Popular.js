@@ -49,7 +49,7 @@ function RepoItem(props) {
       <li className="RepoItem__ranking">#{props.idx + 1}</li>
       <img
         src={props.repo.owner.avatar_url}
-        className="RepoItem__avatar"
+        className="avatar"
         alt={`Repo for ${props.repo.owner.login}`}>
       </img>
       <li><a href={props.repo.html_url} target="_blank">{props.repo.name}</a></li>
