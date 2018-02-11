@@ -1,32 +1,76 @@
 body {
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+  /* margin: 0 auto; */
 }
 
-.App {
-  width: 1200px;
-  margin: 2rem auto 0;
+.App__container {
+  width: 1150px;
+  margin: 1.5rem auto 0;
+  border: 2px solid red;
 }
 
-.Nav {
+.Nav__container {
   display: flex;
   list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
-.Nav a {
+.Nav__container a {
   color: #d0021b;
   text-decoration: none;
-  margin: 0 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .Nav__active {
   font-weight: bold;
 }
 
+.Home__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.Home__header {
+  font-size: 3rem;
+}
+
+.Home__description {
+  margin-top: -1rem;
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
+.Home__button {
+  color: #e6e6e6;
+  background: #0a0a0a;
+  border: none;
+  font-size: 16px;
+  border-radius: 3px;
+  width: 200px;
+  text-align: center;
+  display: block;
+  padding: 7px 0;
+  margin: 2rem auto;
+  text-decoration: none;
+}
+
+.Home__button:hover:enabled {
+  background: linear-gradient(#1a1a1a,#0a0a0a);
+  color: #fff;
+  text-decoration: none;
+}
+
+.Home__button:active {
+  transform: translateY(1px);
+}
+
 .SelectLanguage__container {
   display: flex;
   list-style-type: none;
   justify-content: center;
-  padding-left: 0;
   margin-bottom: 3rem;
 }
 
@@ -40,7 +84,6 @@ body {
   display: grid;
   list-style-type: none;
   grid-template-columns: repeat(6, 1fr);
-  padding-left: 0;
 }
 
 .RepoItem__container {
