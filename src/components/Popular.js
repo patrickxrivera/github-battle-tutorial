@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import api from '../utils/api';
+import Loading from './Loading';
 
 function LanguageItem(props) {
   return (
@@ -121,7 +122,7 @@ class Popular extends React.Component {
         />
         {
           !this.state.repos
-          ? <p>LOADING!</p>
+          ? <Loading />
           : <RepoGrid repos={this.state.repos} />
         }
       </div>
