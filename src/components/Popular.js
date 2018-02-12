@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import API from '../utils/API';
+import api from '../utils/api';
 
 function LanguageItem(props) {
   return (
@@ -101,10 +101,9 @@ class Popular extends React.Component {
       }
     });
 
-    API
+    api
     .fetchPopularRepos(lang)
     .then(repos => {
-      console.log(repos);
       this.setState(() => {
         return {
           repos

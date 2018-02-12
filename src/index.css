@@ -111,7 +111,7 @@ body {
   color: blue;
 }
 
-.Battle__row {
+.row {
   margin-top: 5rem;
   display: flex;
   justify-content: center;
@@ -156,4 +156,20 @@ body {
 
 .PlayerPreview__reset:hover {
   cursor: pointer;
+}
+
+.Player__column--margin-top {
+  margin-top: -5rem;
+}
+
+.Profile__header {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 200;
+  margin-bottom: -0.2rem;
+}
+
+.Profile__list-items {
+  list-style-type: none;
+  align-self: left;
 }
